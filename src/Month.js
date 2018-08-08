@@ -205,6 +205,8 @@ class MonthView extends React.Component {
       popupOffset,
     } = this.props
 
+    let PopupComponent = components.popup || Popup
+
     return (
       <Overlay
         rootClose
@@ -214,7 +216,7 @@ class MonthView extends React.Component {
         target={() => overlay.target}
       >
         {({ props }) => (
-          <Popup
+          <PopupComponent
             {...props}
             popupOffset={popupOffset}
             accessors={accessors}
