@@ -205,7 +205,7 @@ class MonthView extends React.Component {
       popupOffset,
     } = this.props
 
-    let PopupComponent = components.popup || Popup
+    const PopupComponent = components.popup || Popup
 
     return (
       <Overlay
